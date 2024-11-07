@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet-Symfony!</title>
+    <link rel="stylesheet" href="{{ asset('style/style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="navbar"> 
+            <ul class="menu-navbar">
+                <li><a href="/">Accueil</a></li>
+
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <li><a href="{{ path('app_profile') }}">Profile</a></li>
+                <li><a href="/deconnexion">Déconnexion</a></li>
+
+                {% else %}
+                <li><a href="{{ path('app_inscription') }}">Inscription</a></li>
+                <li><a href="{{ path('app_login') }}">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

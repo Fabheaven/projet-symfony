@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+Projet-Symfony - Profile !
+{% endblock %}
+
+{% block body %}
+<div class="profile-page">
+    <div class="profile-card">
+        <h1 class="profile-title">Page de Profile</h1>
+        <p class="profile-text">Bienvenue, {{ app.user.email }}</p>
+    </div>
+</div>
+{% endblock %}

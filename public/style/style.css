@@ -1,0 +1,228 @@
+/* Réinitialisation de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Style de la barre de navigation */
+nav {
+    background-color: #222;
+    padding: 10px 0;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-navbar {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-navbar li {
+    display: inline-block;
+}
+
+.menu-navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-navbar a:hover {
+    background-color: #444;
+    color: #f4f4f9;
+}
+
+/* Conteneur principal */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Titre */
+h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Alertes */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-group, label, .form-error {
+    width: 80%;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Bouton de soumission */
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 500px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Erreurs de validation */
+form .form-error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #333;
+}
+
+/* Styles pour une meilleure apparence sur mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .menu-navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-navbar a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .container {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    form, input, button {
+        width: 90%;
+    }
+
+    /* Styles globaux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+/* Conteneur principal pour la page de profil */
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6; /* Fond de page */
+}
+
+/* Carte de profil */
+.profile-card {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Titre du profil */
+.profile-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+/* Texte de bienvenue */
+.profile-text {
+    font-size: 1.125rem;
+    color: #4b5563;
+}
+
+    
+}
