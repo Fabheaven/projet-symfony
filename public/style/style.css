@@ -7,88 +7,57 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #f3f4f6;
     color: #333;
     line-height: 1.6;
 }
 
-/* Style de la barre de navigation */
-nav {
-    background-color: #222;
-    padding: 10px 0;
-}
-
+/* Barre de navigation */
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #007bff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .menu-navbar {
-    list-style-type: none;
+    list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: flex-start;  /* Alignement des éléments à gauche */
 }
 
 .menu-navbar li {
-    display: inline-block;
+    margin: 0 15px;
 }
 
 .menu-navbar a {
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
     font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .menu-navbar a:hover {
-    background-color: #444;
-    color: #f4f4f9;
+    color: #ffdd57;
 }
 
 /* Conteneur principal */
 .container {
-    width: 100%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 800px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-/* Titre */
+/* Titre de la page */
 h1 {
     font-size: 28px;
     text-align: center;
     margin-bottom: 20px;
     color: #333;
-}
-
-/* Alertes */
-.alert {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.alert-success {
-    background-color: #d4edda;
-    color: #155724;
-}
-
-.alert-danger {
-    background-color: #f8d7da;
-    color: #721c24;
 }
 
 /* Formulaire */
@@ -99,12 +68,16 @@ form {
     width: 100%;
 }
 
-.form-group, label, .form-error {
-    width: 80%;
+label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
     text-align: left;
+    width: 100%;
+    margin-top: 15px;
 }
 
-input {
+input, textarea, select {
     width: 100%;
     max-width: 500px;
     padding: 12px;
@@ -112,9 +85,18 @@ input {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-bottom: 10px;
+    background-color: #f9f9f9;
 }
 
-/* Bouton de soumission */
+input[type="file"] {
+    padding: 3px;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Bouton */
 button {
     padding: 12px;
     background-color: #007bff;
@@ -123,7 +105,7 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
     width: 100%;
     max-width: 500px;
 }
@@ -132,97 +114,202 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Erreurs de validation */
-form .form-error {
+/* Messages d'erreur et de succès */
+.form-error {
     color: #e74c3c;
     font-size: 14px;
     margin-top: 5px;
 }
 
-.password-wrapper {
-    position: relative;
+.form-success {
+    color: #28a745;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
-.password-wrapper .toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #333;
+/* Avatar */
+.avatar-wrapper {
+    text-align: center;
+    margin-top: 15px;
 }
 
-/* Styles pour une meilleure apparence sur mobile */
+.avatar-wrapper img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Styles pour les champs de formulaire */
+input, textarea {
+    font-size: 14px;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group input[type="file"] {
+    width: auto;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 10px;
+    .container {
+        padding: 15px;
+        margin-top: 20px;
     }
 
     .menu-navbar {
         flex-direction: column;
-        gap: 10px;
-    }
-
-    .menu-navbar a {
-        padding: 10px;
         text-align: center;
-        width: 100%;
     }
 
-    .container {
-        padding: 15px;
-        margin-top: 20px;
+    .menu-navbar li {
+        margin: 10px 0;
     }
 
     form, input, button {
         width: 90%;
     }
 
-    /* Styles globaux */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    button {
+        width: 100%;
+    }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
-}
-
-/* Conteneur principal pour la page de profil */
+/* Conteneur principal de la page de profil */
 .profile-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f3f4f6; /* Fond de page */
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 /* Carte de profil */
 .profile-card {
-    width: 100%;
-    max-width: 500px;
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Titre du profil */
+/* Titre de la page de profil */
 .profile-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1f2937;
-    margin-bottom: 10px;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 /* Texte de bienvenue */
 .profile-text {
-    font-size: 1.125rem;
-    color: #4b5563;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-    
+/* Texte des informations de profil */
+.profile-info {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.profile-info strong {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Avatar */
+.profile-avatar {
+    max-width: 120px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Bouton de modification du profil */
+.btn-primary {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Messages flash */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-page {
+        padding: 15px;
+    }
+
+    .profile-card {
+        text-align: center;
+    }
+
+    .profile-info {
+        font-size: 14px;
+    }
+
+    .profile-avatar {
+        max-width: 100px;
+    }
+}
+
+/* Empêche l'affichage en bas à gauche */
+.profile-avatar {
+    max-width: 100px; /* Taille de l'avatar */
+    border-radius: 50%; /* Bord arrondi pour l'avatar */
+    margin-left: 15px; /* Espacement entre le texte et l'avatar */
+    display: inline-block; /* S'assure que l'avatar reste dans la ligne */
+    vertical-align: middle; /* Aligne l'avatar avec le texte */
+}
+
+/* Assure que l'avatar et le texte sont alignés horizontalement */
+.profile-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

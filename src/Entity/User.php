@@ -132,4 +132,95 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // Si vous stockez des informations sensibles, nettoyez-les ici
     }
+
+    /**
+     * Get the value of description
+     */ 
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set the value of description
+     *
+     * @return  self
+     */ 
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getAvatar(): ?string
+    {
+        return $this->avatar;
+    }
+    
+    public function setAvatar(?string $avatar): self
+    {
+        $this->avatar = $avatar;
+        return $this;
+    }
+
+    /**
+     * Get the value of emploi
+     */ 
+    public function getEmploi()
+    {
+        return $this->emploi;
+    }
+
+    /**
+     * Set the value of emploi
+     *
+     * @return  self
+     */ 
+    public function setEmploi($emploi)
+    {
+        $this->emploi = $emploi;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of telephone
+     */ 
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * Set the value of telephone
+     *
+     * @return  self
+     */ 
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of siteURL
+     */ 
+    public function getSiteURL()
+    {
+        return $this->siteURL;
+    }
+
+    /**
+     * Set the value of siteURL
+     *
+     * @return  self
+     */ 
+    public function setSiteURL($siteURL)
+    {
+        $this->siteURL = $siteURL;
+
+        return $this;
+    }
 }
