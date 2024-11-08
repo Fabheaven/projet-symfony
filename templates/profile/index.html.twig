@@ -8,7 +8,32 @@ Projet-Symfony - Profile !
 <div class="profile-page">
     <div class="profile-card">
         <h1 class="profile-title">Page de Profile</h1>
-        <p class="profile-text">Bienvenue, {{ app.user.email }}</p>
+        
+        <p class="profile-text">
+            Bienvenue, {{ app.user.email }}
+            {% if app.user.avatar %}
+                <img src="{{ asset('uploads/avatars/' ~ app.user.avatar) }}" alt="Avatar" class="profile-avatar">
+            {% else %}
+                <span>Aucun avatar disponible</span>
+            {% endif %}
+        </p>
+
+        {# Affichage du message de succès #}
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <p class="profile-info">
+    <strong>Pseudo:</strong> {{ app.user.pseudo }}<br>
+    <strong>Emploi:</strong> {{ app.user.emploi }}<br>
+    <strong>Description:</strong> {{ app.user.description }}<br>
+</p>
+
+
+        {# Bouton de redirection vers la page de modification #}
+        <a href="{{ path('app_modifier_informations') }}" class="btn btn-primary mt-3">Modifier mon profil</a>
     </div>
 </div>
 {% endblock %}
